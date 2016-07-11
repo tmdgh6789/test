@@ -1,0 +1,16 @@
+extends ../layout
+block content
+    h1 Register
+    article
+        form(action='/member/register' method='post')
+            p
+                input(type='text' name='username' placeholder='username')
+            p
+                input(type='password' name='password' placeholder='password')
+            p
+                input(type='text' name='displayName' placeholder='displayName')
+            p
+                input(type='text' name='email' placeholder='email')
+            p
+                input(type='submit' value='register')
+                input(type='button' value='cancel' onclick='location.href="/index/"')

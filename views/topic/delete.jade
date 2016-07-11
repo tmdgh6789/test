@@ -1,0 +1,7 @@
+extends ../layout
+block content
+    article
+        h1= 'Delete ' + result.sub + '?'
+        form(action='/topic/'+id+'/delete' method='post')
+            input(type='submit' value='yes')
+            input(type='button' value='no' onclick="location.href='/index/'+id")

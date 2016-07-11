@@ -1,0 +1,19 @@
+doctype html
+html
+    body
+        ul
+            li
+                a(href='/member/login') Login
+            li
+                a(href='/member/register') register
+        if result
+            h1
+                a(href='/index')= result.sub
+            p= result.des
+            p= "by " + result.author
+        else
+            h1
+                a(href='/index') Server Side JavaScript
+            p This is Server Side JavaScript tutorial.
+            p &nbsp;
+        block content

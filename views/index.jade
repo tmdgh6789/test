@@ -1,0 +1,16 @@
+extends layout
+block content
+    article
+        ul
+            each result in results
+                li
+                    a(href='/index/'+result.id)= result.sub
+    article
+        ul
+            li
+                a(href='/topic/add') add
+            if result
+                li
+                    a(href='/topic/' + result.id + '/edit') edit
+                li
+                    a(href='/topic/' + result.id + '/delete') delete
